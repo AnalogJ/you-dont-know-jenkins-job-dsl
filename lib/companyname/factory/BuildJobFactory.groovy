@@ -7,7 +7,7 @@ public class BuildJobFactory extends JobFactory {
 
     // Define a base build job
     def baseBuildRpmJob(_name,_description){
-        def job = myJob()
+        def job = myJob(_name, _description)
         job.with{
             logRotator(-1, 50, -1, 20)
             publishers {
