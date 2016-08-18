@@ -3,6 +3,7 @@ import companyname.*
 
 public class JobFactory {
 
+    def _dslFactory
     JobFactory(dslFactory){
         _dslFactory = dslFactory
     }
