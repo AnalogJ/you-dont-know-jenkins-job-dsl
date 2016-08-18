@@ -1,5 +1,5 @@
 package companyname.factory
-import companyname
+import companyname.*
 import groovy.transform.* //this is required for the @InheritConstructors decorator
 
 @InheritConstructors
