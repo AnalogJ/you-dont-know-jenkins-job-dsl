@@ -1,5 +1,5 @@
 package companyname.factory
-import companyname
+import companyname.*
 
 public class JobFactory {
 
