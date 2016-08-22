@@ -9,7 +9,7 @@ import hudson.model.*
 import companyname.*
 
 public class Utilities {
-    static populateUserAuthorizationPerFolder(out, user_permissions) {
+    static populateUserAuthorization(out, user_permissions) {
 
         if (!Jenkins.instance.isUseSecurity()) {
             out.print "--> no authorization strategy found. skipping user management."

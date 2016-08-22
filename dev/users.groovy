@@ -45,4 +45,4 @@ def user_permissions = [
         'char.lie': ['hudson.model.Hudson.Read', 'hudson.model.Item.Build',]
 ]
 
-Utilities.populateUserAuthorizationPerFolder(out, user_permissions)
+Utilities.populateUserAuthorization(out, user_permissions)
