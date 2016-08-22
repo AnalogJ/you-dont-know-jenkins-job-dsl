@@ -40,6 +40,7 @@ public class Utilities {
         out.println("--> adding ${user}:${permissions}")
         permissions.each { perm_string ->
             out.println(perm_string)
+            out.println(Permission.fromId(perm_string))
             strategy.add(Permission.fromId(perm_string), user)
         }
     }
