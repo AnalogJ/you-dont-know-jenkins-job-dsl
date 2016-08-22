@@ -13,3 +13,5 @@ buildJobFactory.baseBuildRpmJob('Build-Dynamically-Defined-Rpm', 'dynamic job de
             ant('test-dynamic')
         }
     }
+
+print new JsonSlurper().parseText(readFileFromWorkspace('chef_environment_data.json'))
