@@ -15,4 +15,5 @@ buildJobFactory.baseBuildRpmJob('Build-Dynamically-Defined-Rpm', 'dynamic job de
         }
     }
 
-print new JsonSlurper().parseText(readFileFromWorkspace('chef_environment_data.json'))
+println "parsing the chef_environment_data.json file into a Groovy dictionary"
+println new JsonSlurper().parseText(readFileFromWorkspace('chef_environment_data.json'))
