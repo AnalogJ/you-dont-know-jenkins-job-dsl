@@ -25,7 +25,7 @@ public class Utilities {
         def strategy = Jenkins.instance.getDescriptor("hudson.security.ProjectMatrixAuthorizationStrategy")
 
         out.println('--> Set permissions for automation users:')
-        addUserPermissionsToStrategy(strategy, Constants.automation_username, ['jenkins.model.Jenkins.ADMINISTER'], out)
+        addUserPermissionsToStrategy(strategy, Constants.automation_username, ['hudson.model.Hudson.Administer'], out)
 
         out.println('--> add permissions for each specified user')
         user_permissions.each{ k, v ->
@@ -39,8 +39,6 @@ public class Utilities {
     static addUserPermissionsToStrategy(strategy, user, permissions, out){
         out.println("--> adding ${user}:${permissions}")
         permissions.each { perm_string ->
-            out.println(perm_string)
-            out.println(Permission.fromId(perm_string))
             strategy.add(Permission.fromId(perm_string), user)
         }
     }
