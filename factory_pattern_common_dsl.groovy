@@ -1,5 +1,6 @@
 import companyname.*
 import companyname.factory.*
+import groovy.json.*
 
 def buildJobFactory = new BuildJobFactory(this)
 buildJobFactory.buildWebAppRpm()
