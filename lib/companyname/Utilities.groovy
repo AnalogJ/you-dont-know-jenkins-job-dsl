@@ -38,7 +38,7 @@ public class Utilities {
 
     static addUserPermissionsToStrategy(strategy, user, permissions, out){
         permissions.each {
-            out.println("--> adding ${k}:${v}")
+            out.println("--> adding ${user}:${permissions}")
             strategy.add(Permission.fromId(it), user)
         }
     }
