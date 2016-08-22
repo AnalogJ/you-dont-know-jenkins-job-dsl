@@ -37,7 +37,7 @@ import companyname.*
 def user_permissions = [
 
         //TODO: this is definitely not something you'll do in production, it's just so that you can validate the
-        //DSL worked correctly in Vagrant
+        //DSL worked correctly in Vagrant, 'hudson.model.Hudson.Read' makes a bit more sense.
         'anonymous': ['hudson.model.Hudson.Administer'],
 
         'alice.name': ['hudson.model.Hudson.Administer'],

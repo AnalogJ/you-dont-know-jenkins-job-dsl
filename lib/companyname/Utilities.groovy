@@ -36,7 +36,7 @@ public class Utilities {
         Jenkins.instance.setAuthorizationStrategy(strategy)
     }
 
-    static addUserPermissionsToStrategy(hudson.security.AuthorizationStrategy strategy, String user, List permissions, out){
+    static addUserPermissionsToStrategy(hudson.security.AuthorizationStrategy strategy, String user, permissions, out){
         permissions.each {
             out.println("--> adding ${k}:${v}")
             strategy.add(Permission.fromId(it), user)
