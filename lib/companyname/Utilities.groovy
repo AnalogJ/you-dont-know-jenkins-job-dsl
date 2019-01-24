@@ -21,7 +21,7 @@ public class Utilities {
             return
         }
 
-        //create a new strategy so that we can guarantee that only the users specified have permissions to Jenkins.
+        // Create a new strategy so that we can guarantee that only the users specified have permissions to Jenkins.
         def strategy = Jenkins.instance.getDescriptor("hudson.security.ProjectMatrixAuthorizationStrategy").create()
 
         out.println('--> Set permissions for automation users:')

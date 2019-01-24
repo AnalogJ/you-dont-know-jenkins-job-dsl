@@ -34,15 +34,13 @@ import companyname.*
 # Make it easy on us and list your username in alphabetical order.
 */
 
-def user_permissions = [
-
-        //TODO: this is definitely not something you'll do in production, it's just so that you can validate the
-        //DSL worked correctly in Vagrant, 'hudson.model.Hudson.Read' makes a bit more sense.
+// TODO: this is definitely not something you'll do in production, it's just so that you can validate the
+// DSL worked correctly in Vagrant, 'hudson.model.Hudson.Read' makes a bit more sense.
+def userPermissions = [
         'anonymous': ['hudson.model.Hudson.Administer'],
-
         'alice.name': ['hudson.model.Hudson.Administer'],
         'bob12': ['hudson.model.Hudson.Read', 'hudson.model.Item.Build', 'hudson.model.Item.Workspace'],
-        'char.lie': ['hudson.model.Hudson.Read', 'hudson.model.Item.Build',]
+        'char.lie': ['hudson.model.Hudson.Read', 'hudson.model.Item.Build']
 ]
 
-Utilities.populateUserAuthorization(out, user_permissions)
+Utilities.populateUserAuthorization(out, userPermissions)

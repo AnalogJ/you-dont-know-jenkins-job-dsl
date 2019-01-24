@@ -5,7 +5,9 @@ import groovy.transform.* //this is required for the @InheritConstructors decora
 @InheritConstructors
 public class BuildJobFactory extends JobFactory {
 
-    // Define a base build job
+    /**
+    * Define a base build job.
+    */
     def baseBuildRpmJob(_name,_description){
         def job = myJob(_name, _description)
         job.with{
@@ -18,7 +20,9 @@ public class BuildJobFactory extends JobFactory {
         return job
     }
 
-    // Define specific jobs
+    /**
+    * Define specific jobs.
+    */
     def buildWebAppRpm() {
         def job = baseBuildRpmJob('Build-Webapp-RPM', 'Builds the web app v1 RPM')
         job.with{
